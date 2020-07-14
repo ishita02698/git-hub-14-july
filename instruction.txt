@@ -1,0 +1,4 @@
+Follow the following instructions to work with this project
+This project is done usind Dot Net Core.
+It is an NVC project
+The database used in this is SQL server
