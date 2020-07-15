@@ -1,0 +1,331 @@
+G@HP-Ishita MINGW64 /d/14 july git hub
+$ ls
+
+G@HP-Ishita MINGW64 /d/14 july git hub
+$ git init
+Initialized empty Git repository in D:/14 july git hub/.git/
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git config --global user.name "Ishita"
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git config --global user.email "ishita.golchha@zensar.com"
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git config --edit --global
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ ls
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ ls
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ ls
+README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code instruction.txt
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ ls
+instruction.txt  README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        instruction.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git add .
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   instruction.txt
+
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   instruction.txt
+
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git commit -m "^C
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git commit -m "Add two files Readme and instructions"
+[master (root-commit) c6555b7] Add two files Readme and instructions
+ 2 files changed, 7 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 instruction.txt
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git add *.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git commit -m "Modify README.md file"
+[master d1251c0] Modify README.md file
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git log
+commit d1251c04ff1c8c32c1802a464feaf2d8bbbea5a2 (HEAD -> master)
+Author: Ishita <ishita.golchha@zensar.com>
+Date:   Wed Jul 15 03:55:14 2020 +0530
+
+    Modify README.md file
+
+commit c6555b791ff94b282280350ecc1dd7b2415e011a
+Author: Ishita <ishita.golchha@zensar.com>
+Date:   Wed Jul 15 03:47:11 2020 +0530
+
+    Add two files Readme and instructions
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git log --oneline
+d1251c0 (HEAD -> master) Modify README.md file
+c6555b7 Add two files Readme and instructions
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git log
+commit c6555b791ff94b282280350ecc1dd7b2415e011a (HEAD -> master)
+Author: Ishita <ishita.golchha@zensar.com>
+Date:   Wed Jul 15 03:47:11 2020 +0530
+
+    Add two files Readme and instructions
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git add .
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git commit -m "Revert changes to README.md"
+[master c5841a8] Revert changes to README.md
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git log
+commit c5841a8c742af5727cd6336982565c1f8057b857 (HEAD -> master)
+Author: Ishita <ishita.golchha@zensar.com>
+Date:   Wed Jul 15 04:15:04 2020 +0530
+
+    Revert changes to README.md
+
+commit c6555b791ff94b282280350ecc1dd7b2415e011a
+Author: Ishita <ishita.golchha@zensar.com>
+Date:   Wed Jul 15 03:47:11 2020 +0530
+
+    Add two files Readme and instructions
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git reset --hard HEAD~1
+HEAD is now at c6555b7 Add two files Readme and instructions
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git log
+commit c6555b791ff94b282280350ecc1dd7b2415e011a (HEAD -> master)
+Author: Ishita <ishita.golchha@zensar.com>
+Date:   Wed Jul 15 03:47:11 2020 +0530
+
+    Add two files Readme and instructions
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git reflog
+c6555b7 (HEAD -> master) HEAD@{0}: reset: moving to HEAD~1
+c5841a8 HEAD@{1}: commit: Revert changes to README.md
+c6555b7 (HEAD -> master) HEAD@{2}: reset: moving to HEAD~1
+d1251c0 HEAD@{3}: commit: Modify README.md file
+c6555b7 (HEAD -> master) HEAD@{4}: commit (initial): Add two files Readme and instructions
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code index.html
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ ls
+index.html  instruction.txt  README.md
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git add .
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git commit -m "Create an index.html file"
+[master 4cb4a8c] Create an index.html file
+ 1 file changed, 14 insertions(+)
+ create mode 100644 index.html
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git remote add origin https://github.com/ishita02698/git-hub-14-july.git
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 893 bytes | 297.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/ishita02698/git-hub-14-july.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git pull https://github.com/ishita02698/git-hub-14-july.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 752 bytes | 6.00 KiB/s, done.
+From https://github.com/ishita02698/git-hub-14-july
+ * branch            HEAD       -> FETCH_HEAD
+Updating 4cb4a8c..7d28168
+Fast-forward
+ index.html | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+G@HP-Ishita MINGW64 /d/14 july git hub (master)
+$ code index.html
